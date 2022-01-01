@@ -1,0 +1,30 @@
+body {
+	background-color: #777;
+}
+
+.title {
+	color: seashell;
+	display: inline-block;
+	position: relative;
+	margin: 1.5rem;
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all 0.4s;
+		border-radius: 100px;
+	}
+	&:hover::after {
+		background-color: seashell;
+		transform: scale(1.5);
+		opacity: 0;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+}
